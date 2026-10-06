@@ -1,0 +1,16 @@
+# systemd unit for Lesson Ledger. See README "Run as a background service".
+[Unit]
+Description=Lesson Ledger
+After=network.target
+
+[Service]
+Type=simple
+User=REPLACE_WITH_USER
+WorkingDirectory=/opt/lessonledger
+ExecStart=/opt/lessonledger/run.sh serve
+Restart=always
+RestartSec=1
+# Environment=LL_HOST=0.0.0.0
+
+[Install]
+WantedBy=multi-user.target

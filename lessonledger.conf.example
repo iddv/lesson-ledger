@@ -1,0 +1,11 @@
+# Copy to lessonledger.conf (in the folder you start Lesson Ledger from) and edit.
+# Environment variables LL_HOST, LL_PORT, ... override these values.
+[lessonledger]
+# 127.0.0.1 = this computer only. 0.0.0.0 = every network interface (LAN access).
+host = 127.0.0.1
+port = 8080
+data_dir = data
+# empty = <data_dir>/backups
+backup_dir =
+backup_keep = 14
+log_level = INFO
